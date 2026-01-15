@@ -7,7 +7,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="80" alt="Python Logo" />
   
   <br />
-
   <h1>🚀 Automatización y Virtualización de Infraestructura</h1>
 
   <p align="center">
