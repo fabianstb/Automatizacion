@@ -67,7 +67,24 @@ if __name__ == "__main__":
 chmod u+x script.sh
 ./script.sh
 ```
+---
+## 🧠 Configuración de GIT
 
+1 - Configuración
+```
+git config --global user.name "xxxxxx"
+git config --global user.email xxxxxx
+
+git init
+git remote add origin https://github.com/xxxxxxxx
+
+git add .
+git status
+git commit -m "Agregando xxxxxxxxx"
+
+git push origin master
+```
+---
 ## 🚀 Integración y Despliegue con Jenkins
 
 1 - Instalación de imagen desde docker
