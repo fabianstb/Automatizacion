@@ -1,0 +1,25 @@
+---
+- name: Desplegar Servidor Web Nginx
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: 1. Instalar Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: 2. Copiar la página de inicio personalizada
+      ansible.builtin.copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: 3. Asegurar que Nginx está iniciado y habilitado
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes

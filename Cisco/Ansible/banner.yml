@@ -1,0 +1,12 @@
+---
+- name: Configurar Banner de Seguridad en Router Cisco
+  hosts: csr
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: Configurar el banner MOTD
+      cisco.ios.ios_banner:
+        banner: motd
+        text: "ACCESO RESTRINGIDO. Actividad monitoreada de acuerdo a las politicas de seguridad."
+        state: present
